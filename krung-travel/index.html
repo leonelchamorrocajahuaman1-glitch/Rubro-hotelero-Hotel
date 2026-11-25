@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Krung Travel</title>
-<meta name="description" content="Discover Bangkok's best places to stay and visit. Find suitable ones for you and your family.">
+<meta name="description" content="Descubre los mejores lugares de Bangkok para hospedarte y visitar. Reserva directo o por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -67,7 +67,7 @@ body.lock{overflow:hidden}
 .slide.incoming{visibility:visible;z-index:2}
 .ph{position:absolute;inset:-3%;background-size:cover;background-repeat:no-repeat;transform:scale(1.04);will-change:transform}
 .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(84,64,74,.42) 0%,rgba(84,64,74,.08) 26%,transparent 46%)}
-.title{position:absolute;left:2.6vw;top:calc(74px + 3.2vh);font-weight:700;text-transform:uppercase;line-height:.9;white-space:nowrap;font-size:8.25vw;letter-spacing:-.005em}
+.title{position:absolute;left:2.6vw;top:calc(74px + 3.2vh);font-weight:700;text-transform:uppercase;line-height:.9;white-space:nowrap;font-size:7.6vw;letter-spacing:-.005em}
 .title .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.04em}
 .title .w>span{display:inline-block;background:linear-gradient(180deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.86) 36%,rgba(255,255,255,.16) 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent;transition:transform 1.15s var(--out);transition-delay:var(--d,0s)}
@@ -220,6 +220,14 @@ body.lock{overflow:hidden}
 .booknow{margin-top:16px;width:100%;height:50px;border-radius:99px;background:var(--orange);color:#fff;font-weight:700;font-size:15.5px;transition:background-color .35s,transform .3s var(--out)}
 .booknow:hover{transform:translateY(-2px)}
 .booknow.done{background:#2fae62}
+.bookwa{margin-top:10px;width:100%;height:48px;border-radius:99px;border:1.5px solid #25d366;color:#128c4a;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;gap:9px;transition:background-color .3s,color .3s}
+.bookwa svg{width:20px;height:20px}
+.bookwa:hover{background:#25d366;color:#fff}
+.wa-float{position:fixed;right:calc(22px + env(safe-area-inset-right,0px));bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:46;height:58px;min-width:58px;padding:0 17px;border-radius:99px;background:#25d366;color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;font-size:14.5px;box-shadow:0 14px 32px -10px rgba(18,140,74,.65);transition:transform .35s var(--out)}
+.wa-float svg{width:26px;height:26px;flex:none}
+.wa-float:hover{transform:translateY(-3px) scale(1.03)}
+.wa-float span{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .5s var(--out)}
+.wa-float:hover span,.wa-float:focus-visible span{max-width:240px}
 .rating{margin-top:24px;padding:16px 0;border-top:1px solid #ece6e8;border-bottom:1px solid #ece6e8;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .r-score{display:flex;align-items:center;gap:8px;font-size:14px}
 .r-score b{font-size:20px;font-weight:700}
@@ -259,6 +267,8 @@ body.lock{overflow:hidden}
   .pop{padding:16px}
   .dow,.days{grid-template-columns:repeat(7,1fr)}
   .stays{margin-top:-8vh}
+  .wa-float{height:52px;min-width:52px;padding:0 13px;right:16px;bottom:16px}
+  .wa-float span{display:none}
   .stays-h h2{font-size:24px}
   .amen{grid-template-columns:repeat(2,1fr)}
 }
@@ -282,24 +292,27 @@ body.lock{overflow:hidden}
   <symbol id="pier" viewBox="0 0 24 24"><path d="M3 9h18M5 9v11M12 9v11M19 9v11M2 16c1.7 0 1.7 1 3.3 1s1.7-1 3.4-1 1.6 1 3.3 1 1.7-1 3.3-1 1.7 1 3.4 1 1.6-1 3.3-1M12 3v6"/></symbol>
   <symbol id="medal" viewBox="0 0 24 24"><circle cx="12" cy="14.5" r="5.5"/><path d="m8 9.5-3-6.5h5l2 4 2-4h5l-3 6.5M12 12v5"/></symbol>
   <symbol id="film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
+  <symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" stroke="none" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3c.2.2 2.2 3.4 5.3 4.7 2 .8 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.5-.3Z"/></symbol>
   <symbol id="bell" viewBox="0 0 24 24"><path d="M3 18h18M4.5 18a7.5 7.5 0 0 1 15 0M12 8.5V6.5M10 6.5h4"/></symbol>
 </svg>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#wa"/></svg><span>¿Reservamos por WhatsApp?</span></a>
 
 <header class="nav" id="nav">
   <div class="nav-l">
     <a class="logo" href="#" id="logo">Krung Travel</a>
     <span class="div" aria-hidden="true"></span>
-    <button class="visitors" type="button" data-open="vis">Visitors <svg viewBox="0 0 10 10"><path d="m2 3.5 3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+    <button class="visitors" type="button" data-open="vis">Visitantes <svg viewBox="0 0 10 10"><path d="m2 3.5 3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
   </div>
   <ul class="links">
-    <li><a href="#stays">Apartments</a></li>
-    <li><a href="#hero" data-slide="2">Where to go</a></li>
-    <li><a href="#footer-contact" id="contact-link">Contact Us</a></li>
+    <li><a href="#stays">Apartamentos</a></li>
+    <li><a href="#hero" data-slide="2">Dónde ir</a></li>
+    <li><a href="#footer-contact" id="contact-link">Contáctanos</a></li>
   </ul>
   <div class="nav-r">
-    <a class="host-link" href="#stays">Become a host</a>
+    <a class="host-link" href="#stays">Hazte anfitrión</a>
     <svg class="i globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.9 5.5 3.9 9s-1.3 6.5-3.9 9c-2.6-2.5-3.9-5.5-3.9-9S9.4 5.5 12 3Z"/></svg>
-    <button class="pill" type="button" aria-label="Account menu">
+    <button class="pill" type="button" aria-label="Menú de cuenta">
       <svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       <span class="avatar"><svg viewBox="0 0 16 16"><circle cx="8" cy="5" r="3.2"/><path d="M1.5 16a6.5 6.5 0 0 1 13 0Z"/></svg></span>
     </button>
@@ -313,17 +326,17 @@ body.lock{overflow:hidden}
       <div class="slide live" data-i="0">
         <div class="ph" style="background-position:center 62%;background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005348_d02f5076-330a-4062-960b-b000a310d6e4.png&w=2400&q=85')"></div>
         <div class="tint"></div>
-        <h1 class="title"><span class="w"><span>Welcome</span></span> <span class="w"><span>to</span></span> <span class="w"><span>Bangkok</span></span></h1>
+        <h1 class="title"><span class="w"><span>Bienvenido</span></span> <span class="w"><span>a</span></span> <span class="w"><span>Bangkok</span></span></h1>
       </div>
       <div class="slide" data-i="1">
         <div class="ph" style="background-position:center 55%;background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_2a7781a6-ffd1-48f1-bb19-051b67063047.png&w=2400&q=85')"></div>
         <div class="tint"></div>
-        <h2 class="title"><span class="w"><span>Find</span></span> <span class="w"><span>place</span></span> <span class="w"><span>to</span></span> <span class="w"><span>stay</span></span></h2>
+        <h2 class="title"><span class="w"><span>Encuentra</span></span> <span class="w"><span>tu</span></span> <span class="w"><span>estadía</span></span></h2>
       </div>
       <div class="slide" data-i="2">
         <div class="ph" style="background-position:center 40%;background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_73725010-6ca6-46d8-a732-fc33275a02e0.png&w=2400&q=85')"></div>
         <div class="tint"></div>
-        <h2 class="title t3"><span class="w br"><span>Explore</span></span><span class="w br"><span>Bangkok</span></span></h2>
+        <h2 class="title t3"><span class="w br"><span>Explora</span></span><span class="w br"><span>Bangkok</span></span></h2>
       </div>
     </div>
     <div class="mist" id="mist" aria-hidden="true"></div>
@@ -333,45 +346,45 @@ body.lock{overflow:hidden}
 
     <div class="rail" id="rail">
       <span class="ring" id="r1"></span><span class="ring" id="r2"></span>
-      <button class="thumb" type="button" data-slide="2" aria-label="Explore Bangkok"><span class="img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_2697af01-b81b-4c9e-bb4f-7200cb1aa1e8.png&w=400&q=85')"></span></button>
-      <button class="thumb" type="button" data-slide="1" aria-label="Find place to stay"><span class="img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_e2768ec3-714b-47bc-b03e-4fc6794d5dd9.png&w=400&q=85')"></span></button>
-      <button class="thumb" type="button" data-slide="0" aria-label="Welcome to Bangkok"><span class="img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_c5667173-fd6e-4dcb-9547-6c4518e19388.png&w=400&q=85')"></span></button>
+      <button class="thumb" type="button" data-slide="2" aria-label="Explora Bangkok"><span class="img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_2697af01-b81b-4c9e-bb4f-7200cb1aa1e8.png&w=400&q=85')"></span></button>
+      <button class="thumb" type="button" data-slide="1" aria-label="Encuentra tu estadía"><span class="img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_e2768ec3-714b-47bc-b03e-4fc6794d5dd9.png&w=400&q=85')"></span></button>
+      <button class="thumb" type="button" data-slide="0" aria-label="Bienvenido a Bangkok"><span class="img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_c5667173-fd6e-4dcb-9547-6c4518e19388.png&w=400&q=85')"></span></button>
       <span class="conn" id="conn"></span>
       <div class="cap" id="cap"><span class="bar" id="cbar"></span><div class="txt"><h2 id="capH"></h2><p id="capP"></p></div></div>
     </div>
 
     </div>
     <form class="search" id="search" onsubmit="return false">
-      <button class="field" type="button" data-f="dest"><svg class="i"><use href="#pin"/></svg><span class="lb"><b>Bangkok</b><small>Choose the destination</small></span></button>
-      <button class="field on" type="button" data-f="in"><svg class="i"><use href="#cal"/></svg><span class="lb"><b>Check in</b><small id="inL">Add date</small></span></button>
-      <button class="field" type="button" data-f="out"><svg class="i"><use href="#cal"/></svg><span class="lb"><b>Check out</b><small id="outL">Add date</small></span></button>
-      <button class="field" type="button" data-f="vis"><svg class="i"><use href="#ppl"/></svg><span class="lb"><b>Visitors</b><small id="visL">Add guests</small></span></button>
-      <button class="send" type="button" id="send" aria-label="Search stays"><svg class="i"><use href="#plane"/></svg></button>
+      <button class="field" type="button" data-f="dest"><svg class="i"><use href="#pin"/></svg><span class="lb"><b>Bangkok</b><small>Elige el destino</small></span></button>
+      <button class="field on" type="button" data-f="in"><svg class="i"><use href="#cal"/></svg><span class="lb"><b>Entrada</b><small id="inL">Agregar fecha</small></span></button>
+      <button class="field" type="button" data-f="out"><svg class="i"><use href="#cal"/></svg><span class="lb"><b>Salida</b><small id="outL">Agregar fecha</small></span></button>
+      <button class="field" type="button" data-f="vis"><svg class="i"><use href="#ppl"/></svg><span class="lb"><b>Huéspedes</b><small id="visL">Agregar huéspedes</small></span></button>
+      <button class="send" type="button" id="send" aria-label="Buscar alojamientos"><svg class="i"><use href="#plane"/></svg></button>
 
-      <div class="pop cal" id="calPop" role="dialog" aria-label="Choose dates">
-        <div class="cal-h"><button type="button" id="prevM" aria-label="Previous month">‹</button><span id="monthL"></span><button type="button" id="nextM" aria-label="Next month">›</button></div>
-        <div class="dow"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+      <div class="pop cal" id="calPop" role="dialog" aria-label="Elige las fechas">
+        <div class="cal-h"><button type="button" id="prevM" aria-label="Mes anterior">‹</button><span id="monthL"></span><button type="button" id="nextM" aria-label="Mes siguiente">›</button></div>
+        <div class="dow"><span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sá</span><span>Do</span></div>
         <div class="days" id="days"></div>
       </div>
-      <div class="pop vis" id="visPop" role="dialog" aria-label="Guests">
-        <div class="row"><div><b>Adults</b><small>Ages 13 or above</small></div><div class="step"><button type="button" data-k="ad" data-d="-1" aria-label="Fewer adults">−</button><output id="adN">2</output><button type="button" data-k="ad" data-d="1" aria-label="More adults">+</button></div></div>
-        <div class="row"><div><b>Children</b><small>Ages 2–12</small></div><div class="step"><button type="button" data-k="ch" data-d="-1" aria-label="Fewer children">−</button><output id="chN">0</output><button type="button" data-k="ch" data-d="1" aria-label="More children">+</button></div></div>
+      <div class="pop vis" id="visPop" role="dialog" aria-label="Huéspedes">
+        <div class="row"><div><b>Adultos</b><small>13 años o más</small></div><div class="step"><button type="button" data-k="ad" data-d="-1" aria-label="Quitar un adulto">−</button><output id="adN">2</output><button type="button" data-k="ad" data-d="1" aria-label="Añadir un adulto">+</button></div></div>
+        <div class="row"><div><b>Niños</b><small>De 2 a 12 años</small></div><div class="step"><button type="button" data-k="ch" data-d="-1" aria-label="Quitar un niño">−</button><output id="chN">0</output><button type="button" data-k="ch" data-d="1" aria-label="Añadir un niño">+</button></div></div>
       </div>
     </form>
   </section>
 
   <section class="stays" id="stays">
-    <div class="stays-h"><h2 class="gilda">Recomended Places to Stay</h2><a class="see" href="#stays">See All</a></div>
+    <div class="stays-h"><h2 class="gilda">Lugares recomendados para hospedarte</h2><a class="see" href="#stays">Ver todo</a></div>
     <div class="grid" id="grid"></div>
-    <p id="footer-contact" style="margin-top:70px;font-size:13px;color:var(--light)">Krung Travel · Bangkok, Thailand · hello@krungtravel.example</p>
+    <p id="footer-contact" style="margin-top:70px;font-size:13px;color:var(--light)">Krung Travel · Bangkok, Tailandia · hola@krungtravel.example</p>
   </section>
 </main>
 
-<section class="detail" id="detail" aria-label="Property details" aria-hidden="true">
-  <nav class="crumbs rise" style="--d:.25s"><a href="#" id="home">Home</a><span>›</span><span>Type of places to stay</span><span>›</span><span>Villas</span><span>›</span><span class="last" id="dCrumb"></span></nav>
+<section class="detail" id="detail" aria-label="Detalle del alojamiento" aria-hidden="true">
+  <nav class="crumbs rise" style="--d:.25s"><a href="#" id="home">Inicio</a><span>›</span><span>Tipos de alojamiento</span><span>›</span><span>Villas</span><span>›</span><span class="last" id="dCrumb"></span></nav>
   <div class="cols">
     <div>
-      <div class="main hide" id="dMain"><div class="lay" id="dLo"></div><div class="lay" id="dHi"></div><button class="heart" type="button" aria-label="Save"><svg><use href="#heart"/></svg></button></div>
+      <div class="main hide" id="dMain"><div class="lay" id="dLo"></div><div class="lay" id="dHi"></div><button class="heart" type="button" aria-label="Guardar"><svg><use href="#heart"/></svg></button></div>
       <div class="minis rise" style="--d:.32s">
         <div style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005420_531ca3bc-da2a-48a8-9506-30b46f6725a5.png&w=500&q=85')"></div>
         <div style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005422_3d48e291-6d44-46fa-a18e-ab2f7c791839.png&w=500&q=85')"></div>
@@ -380,46 +393,51 @@ body.lock{overflow:hidden}
     </div>
     <div>
       <h1 class="gilda d-name rise" style="--d:.39s" id="dName"></h1>
-      <p class="host rise" style="--d:.46s">Hosted by <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005635_2bc44540-0fec-4b94-9f47-722c00c851dd.png&w=120&q=85" alt=""><b>Ploy Sirikul</b></p>
+      <p class="host rise" style="--d:.46s">Anfitriona <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005635_2bc44540-0fec-4b94-9f47-722c00c851dd.png&w=120&q=85" alt=""><b>Ploy Sirikul</b></p>
       <h2 class="gilda about rise" style="--d:.53s" id="dAbout"></h2>
-      <p class="d-p rise" style="--d:.6s">Set on the quiet Thonburi bank, this home puts the Grand Palace and Wat Arun a short walk and a river crossing away. Hop on the river ferries to Chinatown for a night of street food, then come back to a lantern-lit teak terrace where the river slides past in the dark.</p>
+      <p class="d-p rise" style="--d:.6s">En la tranquila orilla de Thonburi, esta casa deja el Gran Palacio y Wat Arun a un corto paseo y un cruce de río. Sube a los ferris del río hasta Chinatown para una noche de comida callejera y vuelve a una terraza de teca iluminada con faroles, mientras el río pasa en la oscuridad.</p>
       <div class="book rise" style="--d:.67s">
         <p class="pr" id="dPrice"></p>
-        <div class="dates"><div><small>Check In</small><b id="dIn"></b></div><div><small>Check Out</small><b id="dOut"></b></div></div>
-        <div class="guests"><div><small>Guests</small><b id="dG"></b></div><div class="step"><button type="button" data-k="dg" data-d="-1" aria-label="Fewer guests">−</button><output id="dGN"></output><button type="button" data-k="dg" data-d="1" aria-label="More guests">+</button></div></div>
-        <button class="booknow" type="button" id="bookNow">Book Now</button>
+        <div class="dates"><div><small>Entrada</small><b id="dIn"></b></div><div><small>Salida</small><b id="dOut"></b></div></div>
+        <div class="guests"><div><small>Huéspedes</small><b id="dG"></b></div><div class="step"><button type="button" data-k="dg" data-d="-1" aria-label="Quitar un huésped">−</button><output id="dGN"></output><button type="button" data-k="dg" data-d="1" aria-label="Añadir un huésped">+</button></div></div>
+        <button class="booknow" type="button" id="bookNow">Reservar ahora</button>
+        <a class="bookwa" id="bookWa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#wa"/></svg>Reservar por WhatsApp</a>
       </div>
       <div class="rating rise" style="--d:.74s">
-        <div class="r-score"><b>4.8</b><span>(128 reviews)</span><span class="rs"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span></div>
+        <div class="r-score"><b>4.8</b><span>(128 reseñas)</span><span class="rs"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span></div>
         <div class="faces">
           <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005635_2bc44540-0fec-4b94-9f47-722c00c851dd.png&w=120&q=85" alt="">
           <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005635_fee8e948-a5dc-4e86-9ecc-dc8dbce6b660.png&w=120&q=85" alt="">
           <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005635_ce259660-2765-42ee-a5b0-3afee70b11aa.png&w=120&q=85" alt="">
         </div>
-        <button class="rate" type="button" id="rate">Rate Now</button>
+        <button class="rate" type="button" id="rate">Calificar</button>
       </div>
-      <h2 class="gilda amen-h rise" style="--d:.81s">Amenities</h2>
+      <h2 class="gilda amen-h rise" style="--d:.81s">Comodidades</h2>
       <ul class="amen rise" style="--d:.86s">
         <li><svg class="i"><use href="#wifi"/></svg>Wi-Fi</li>
-        <li><svg class="i"><use href="#bar"/></svg>Personal Bar</li>
-        <li><svg class="i"><use href="#pier"/></svg>Private Pier</li>
-        <li><svg class="i"><use href="#medal"/></svg>Superhost</li>
-        <li><svg class="i"><use href="#film"/></svg>Own Cinema</li>
-        <li><svg class="i"><use href="#bell"/></svg>Room Service</li>
+        <li><svg class="i"><use href="#bar"/></svg>Bar privado</li>
+        <li><svg class="i"><use href="#pier"/></svg>Muelle privado</li>
+        <li><svg class="i"><use href="#medal"/></svg>Superanfitrión</li>
+        <li><svg class="i"><use href="#film"/></svg>Cine propio</li>
+        <li><svg class="i"><use href="#bell"/></svg>Servicio a la habitación</li>
       </ul>
     </div>
   </div>
-  <div class="similar rise" style="--d:.9s"><h2 class="gilda">Similar Places to Stay</h2><div class="grid" id="simGrid"></div></div>
+  <div class="similar rise" style="--d:.9s"><h2 class="gilda">Lugares similares</h2><div class="grid" id="simGrid"></div></div>
 </section>
 
 <script>
 (() => {
 const $ = id => document.getElementById(id), $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const IMG = (id, w) => `https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_${id}.png&w=${w}&q=85`;
+/* WhatsApp: número de EJEMPLO. Cámbialo por el real (solo dígitos, con código de país). */
+const WHATSAPP = '51999000000';
+const waLink = text => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
 const CLOUD = IMG('20261115_005635_6590354a-216c-40a2-9f84-93abe97dc7b1', 2400);
 const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
 const eio = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 const calm = matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('waFloat').href = waLink('Hola Krung Travel, quiero información para hospedarme en Bangkok.');
 if (/[?&]rec\b/.test(location.search)) document.documentElement.classList.add('rec');
 $$('.cloud').forEach(c => c.style.backgroundImage = `url('${CLOUD}')`);
 
@@ -452,10 +470,10 @@ function card(i, col) {
   const [name, area, price, id] = STAYS[i];
   const a = document.createElement('article');
   a.className = 'card'; a.dataset.i = i; a.tabIndex = 0; a.style.setProperty('--d', col * .09 + 's');
-  a.setAttribute('aria-label', `${name}, ${area}, ${price} per night`);
+  a.setAttribute('aria-label', `${name}, ${area}, ${price} por noche`);
   a.innerHTML = `<div class="img" style="background-image:url('${IMG(id, 700)}')"></div>
-    <span class="price">${price}<span>/night</span></span>
-    <button class="heart" type="button" aria-label="Save ${name}" aria-pressed="false"><svg><use href="#heart"/></svg></button>
+    <span class="price">${price}<span>/noche</span></span>
+    <button class="heart" type="button" aria-label="Guardar ${name}" aria-pressed="false"><svg><use href="#heart"/></svg></button>
     <div class="meta"><h3>${name}</h3><p class="area"><svg class="i"><use href="#pin"/></svg>${area}</p><p class="stars">${STAR.repeat(5)}<b>4,8</b></p></div>`;
   return a;
 }
@@ -481,9 +499,9 @@ document.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.cl
 /* ---------- Hero slides ---------- */
 const hero = $('hero'), slides = $$('.slide'), phs = slides.map(s => s.querySelector('.ph'));
 const CAPS = [
-  ['Discover Bangkok', "Discover Bangkok's best places to stay and visit. Find suitable ones for you and your family"],
-  ['Places to stay', 'Riverside teak houses, sky-high suites and quiet garden villas picked for you'],
-  ['Places to go', "Explore through the eyes of Bangkok's best Thai adventures"]
+  ['Descubre Bangkok', 'Descubre los mejores lugares de Bangkok para hospedarte y visitar. Encuentra los ideales para ti y tu familia'],
+  ['Dónde hospedarte', 'Casas de teca junto al río, suites en las alturas y villas con jardín elegidas para ti'],
+  ['Lugares para visitar', 'Explora Bangkok a través de sus mejores aventuras tailandesas']
 ];
 const thumbs = $$('.thumb'), conn = $('conn'), cap = $('cap'), r1 = $('r1'), r2 = $('r2');
 let cur_ = 0, wipe = null, liveSince = performance.now(), timer = 0, capT = 0;
@@ -583,7 +601,7 @@ showCaption(0, 900);
 schedule();
 
 /* ---------- Search: calendar & guests ---------- */
-const MONTH = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+const MONTH = d => d.toLocaleDateString('es-PE', { day: 'numeric', month: 'short' });
 const today = new Date(); today.setHours(0, 0, 0, 0);
 let ci = null, co = null, view = new Date(today.getFullYear(), today.getMonth(), 1);
 const guests = { ad: 2, ch: 0 }; let guestsTouched = false;
@@ -593,7 +611,7 @@ function openPop(which) {
   calPop.classList.toggle('open', which === 'cal'); visPop.classList.toggle('open', which === 'vis');
 }
 function renderCal() {
-  $('monthL').textContent = view.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  const ml = view.toLocaleDateString('es-PE', { month: 'long', year: 'numeric' }); $('monthL').textContent = ml[0].toUpperCase() + ml.slice(1);
   $('prevM').disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
   const first = (view.getDay() + 6) % 7, n = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
   const out = [];
@@ -614,8 +632,8 @@ function renderCal() {
 function pickDay(d) {
   if (!ci || co || d <= ci) { ci = d; co = null; raise('out'); }
   else { co = d; raise('vis'); openPop('vis'); }
-  $('inL').textContent = ci ? MONTH(ci) : 'Add date';
-  $('outL').textContent = co ? MONTH(co) : 'Add date';
+  $('inL').textContent = ci ? MONTH(ci) : 'Agregar fecha';
+  $('outL').textContent = co ? MONTH(co) : 'Agregar fecha';
   renderCal();
 }
 $('prevM').addEventListener('click', e => { e.stopPropagation(); view.setMonth(view.getMonth() - 1); renderCal(); });
@@ -629,7 +647,7 @@ fields.forEach(f => f.addEventListener('click', e => {
 $$('[data-open="vis"]').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); scrollTo({ top: 0, behavior: 'smooth' }); raise('vis'); openPop('vis'); }));
 function guestLabel() {
   const n = guests.ad + guests.ch;
-  $('visL').textContent = guestsTouched ? `${n} guest${n > 1 ? 's' : ''}` : 'Add guests';
+  $('visL').textContent = guestsTouched ? `${n} huésped${n > 1 ? 'es' : ''}` : 'Agregar huéspedes';
   $('adN').textContent = guests.ad; $('chN').textContent = guests.ch;
   $$('#visPop [data-d="-1"]').forEach(b => b.disabled = guests[b.dataset.k] <= (b.dataset.k === 'ad' ? 1 : 0));
 }
@@ -644,17 +662,21 @@ $('send').addEventListener('click', e => { e.stopPropagation(); openPop(null); $
 renderCal(); guestLabel();
 
 /* ---------- Detail page with shared-element flight ---------- */
-const detail = $('detail'); let detailOpen = false, dGuests = 2;
-const LONG = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const detail = $('detail'); let detailOpen = false, dGuests = 2, current = 0;
+function waBook() {
+  const [name, area, price] = STAYS[current];
+  $('bookWa').href = waLink(`Hola Krung Travel, quiero reservar ${name} (${area}).\n• Entrada: ${$('dIn').textContent}\n• Salida: ${$('dOut').textContent}\n• Huéspedes: ${dGuests}\n• Tarifa: ${price} por noche\n¿Tienen disponibilidad?`);
+}
+const LONG = d => d.toLocaleDateString('es-PE', { day: 'numeric', month: 'short', year: 'numeric' });
 function openDetail(i, fromCard) {
   const [name, area, price, id] = STAYS[i];
   const rect = fromCard.getBoundingClientRect();
-  $('dName').textContent = name; $('dCrumb').textContent = `${name}, ${area}`; $('dAbout').textContent = `About ${name}`;
-  $('dPrice').innerHTML = `${price}<span>/night</span>`;
+  $('dName').textContent = name; $('dCrumb').textContent = `${name}, ${area}`; $('dAbout').textContent = `Sobre ${name}`; current = i;
+  $('dPrice').innerHTML = `${price}<span>/noche</span>`;
   $('dIn').textContent = LONG(ci || new Date(2026, 11, 22));
   $('dOut').textContent = LONG(co || new Date(2026, 11, 27));
   dGuests = guests.ad + guests.ch; updG();
-  $('bookNow').classList.remove('done'); $('bookNow').textContent = 'Book Now';
+  $('bookNow').classList.remove('done'); $('bookNow').textContent = 'Reservar ahora';
   const main = $('dMain'); main.classList.add('hide');
   $('dLo').style.backgroundImage = `url('${IMG(id, 700)}')`; $('dHi').style.backgroundImage = `url('${IMG(id, 1400)}')`;
   fill($('simGrid'), [1, 2, 4, 5, 6, 7, 0, 3].filter(x => x !== i).slice(0, 4));
@@ -678,10 +700,10 @@ function closeDetail() {
   detail.classList.remove('open', 'shown'); detail.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('lock'); detailOpen = false;
 }
-function updG() { $('dG').textContent = `${dGuests} guest${dGuests > 1 ? 's' : ''}`; $('dGN').textContent = dGuests; $$('#detail [data-k="dg"][data-d="-1"]')[0].disabled = dGuests <= 1; }
+function updG() { $('dG').textContent = `${dGuests} huésped${dGuests > 1 ? 'es' : ''}`; waBook(); $('dGN').textContent = dGuests; $$('#detail [data-k="dg"][data-d="-1"]')[0].disabled = dGuests <= 1; }
 $$('#detail [data-k="dg"]').forEach(b => b.addEventListener('click', () => { dGuests = clamp(dGuests + +b.dataset.d, 1, 10); updG(); }));
-$('bookNow').addEventListener('click', e => { e.currentTarget.classList.add('done'); e.currentTarget.textContent = 'Booked ✓'; });
-$('rate').addEventListener('click', e => { const on = e.currentTarget.classList.toggle('on'); e.currentTarget.textContent = on ? 'Thanks!' : 'Rate Now'; });
+$('bookNow').addEventListener('click', e => { e.currentTarget.classList.add('done'); e.currentTarget.textContent = 'Reservado ✓'; });
+$('rate').addEventListener('click', e => { const on = e.currentTarget.classList.toggle('on'); e.currentTarget.textContent = on ? '¡Gracias!' : 'Calificar'; });
 $('home').addEventListener('click', e => { e.preventDefault(); closeDetail(); });
 $('logo').addEventListener('click', e => { e.preventDefault(); if (detailOpen) closeDetail(); else scrollTo({ top: 0, behavior: 'smooth' }); });
 $('contact-link').addEventListener('click', e => { e.preventDefault(); closeDetail(); $('footer-contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
