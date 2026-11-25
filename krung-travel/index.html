@@ -300,8 +300,86 @@ button.mi:hover,a.mi:hover{background:#f8eee8}
 .fly{position:fixed;z-index:45;background-size:cover;background-position:center;pointer-events:none;will-change:left,top,width,height}
 
 /* ---------- Responsive ---------- */
+
+/* ---------- Secciones de la página completa ---------- */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s var(--out),transform .9s var(--out);transition-delay:var(--d,0s)}
+.rv.seen{opacity:1;transform:none}
+.sec{padding:0 var(--pad) 120px;position:relative}
+.sec,.stays,.foot{scroll-margin-top:96px}
+.sec-h{max-width:640px;margin-bottom:34px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b4693f}
+.eyebrow-l{color:#f7c7a4}
+.sec-h h2{margin-top:10px;font-size:clamp(28px,2.9vw,42px);line-height:1.1}
+.sec-h p:not(.eyebrow){margin-top:12px;font-size:16px;line-height:1.6;color:var(--muted)}
+.xp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,26px)}
+.xp{position:relative;display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 34px rgba(110,60,50,.12);transition:opacity .9s var(--out),transform .9s var(--out),box-shadow .5s;transition-delay:var(--d,0s),var(--d,0s),0s}
+.xp.seen:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(110,60,50,.22);transition-delay:0s}
+.xp-img{aspect-ratio:4/3.4;background-size:cover;transition:transform 1.2s var(--out)}
+.xp:hover .xp-img{transform:scale(1.05)}
+.xp-tag{position:absolute;left:12px;top:12px;padding:5px 10px;border-radius:99px;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-size:11.5px;font-weight:700}
+.xp-body{position:relative;display:flex;flex-direction:column;flex:1;padding:18px;background:#fff}
+.xp-body h3{font-family:"Gilda Display",Georgia,serif;font-weight:400;font-size:22px;line-height:1.15}
+.xp-body>p{margin-top:8px;font-size:14px;line-height:1.55;color:var(--muted)}
+.xp-foot{margin-top:auto;padding-top:16px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--light)}
+.xp-meta{display:flex;align-items:center;gap:5px}
+.xp-price b{color:var(--ink);font-size:17px;font-weight:700}
+.xp-btn{margin-top:14px;height:42px;border-radius:99px;background:#1d1a1c;color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:700;transition:background-color .3s,transform .3s var(--out)}
+.xp-btn svg{width:18px;height:18px}
+.xp-btn:hover{background:#25d366;transform:translateY(-1px)}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,34px);counter-reset:s}
+.steps li{position:relative;padding:28px 26px;border-radius:18px;background:rgba(255,255,255,.66)}
+.steps li:not(:last-child)::after{content:"";position:absolute;top:52px;left:calc(26px + 50px);right:-34px;height:1.5px;background:repeating-linear-gradient(90deg,#e2b79d 0 6px,transparent 6px 12px);z-index:-1}
+.step-n{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:19px;font-weight:700;color:#fff;background:var(--orange);box-shadow:0 10px 22px rgba(243,148,25,.35)}
+.steps h3{margin-top:18px;font-size:20px;font-weight:700}
+.steps p{margin-top:8px;font-size:14.5px;line-height:1.6;color:var(--muted)}
+.trust{margin-top:clamp(28px,3vw,44px);display:grid;grid-template-columns:repeat(4,1fr);border-radius:18px;background:#1d1a1c;color:#fff;overflow:hidden}
+.trust>div{padding:24px 26px;display:flex;flex-direction:column-reverse;gap:4px}
+.trust>div+div{border-left:1px solid rgba(255,255,255,.1)}
+.trust dd{font-family:"Gilda Display",Georgia,serif;font-size:clamp(30px,3vw,42px);line-height:1}
+.trust dd small{font-size:.5em;color:#f7c7a4}
+.trust dt{font-size:13px;color:#c9bcc1}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,26px)}
+.review{display:flex;flex-direction:column;padding:26px;border-radius:18px;background:#fff;box-shadow:0 14px 34px rgba(110,60,50,.1)}
+.rv-stars{display:flex;gap:3px}.rv-stars svg{width:15px;height:15px;fill:var(--star)}
+.review blockquote{margin-top:14px;font-size:15.5px;line-height:1.65;color:#3b3236}
+.review figcaption{margin-top:auto;padding-top:20px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--light)}
+.review figcaption img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.review figcaption b{display:block;color:var(--ink);font-size:14.5px;font-weight:700}
+.host{border-radius:24px;padding:clamp(34px,5vw,72px);min-height:380px;display:flex;flex-direction:column;justify-content:center;background-size:cover;background-position:center 60%;color:#fff}
+.host h2{margin-top:12px;font-size:clamp(28px,3.2vw,46px);line-height:1.1;max-width:560px}
+.host>p:not(.eyebrow){margin-top:14px;max-width:470px;font-size:16px;line-height:1.6;color:#f2e6ea}
+.host-cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.btn-o,.btn-g{height:48px;padding:0 24px;border-radius:99px;display:inline-flex;align-items:center;font-weight:700;font-size:15px;transition:transform .3s var(--out),background-color .3s}
+.btn-o{background:var(--orange);color:#fff}.btn-o:hover{transform:translateY(-2px)}
+.btn-g{border:1.5px solid rgba(255,255,255,.6);color:#fff}.btn-g:hover{background:rgba(255,255,255,.14)}
+.faq{max-width:860px;display:grid;gap:10px}
+.faq details{border-radius:14px;background:rgba(255,255,255,.7);transition:background-color .3s}
+.faq details[open]{background:#fff;box-shadow:0 12px 28px rgba(110,60,50,.1)}
+.faq summary{list-style:none;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:16.5px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:20px;font-weight:400;background:#f6e3d8;transition:transform .35s var(--out)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 22px 20px;font-size:15px;line-height:1.65;color:var(--muted);max-width:720px}
+.foot{background:#211b1e;color:#c9bcc1;padding:72px var(--pad) 28px;margin-top:20px}
+.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:40px}
+.foot .logo{color:#fff}
+.foot-brand p{margin:14px 0 20px;max-width:330px;font-size:14.5px;line-height:1.6}
+.foot-wa{width:auto!important;display:inline-flex!important;padding:0 20px;color:#fff!important;border-color:#25d366!important;background:rgba(37,211,102,.12)}
+.foot-col{display:flex;flex-direction:column;align-items:flex-start;gap:10px;font-size:14.5px}
+.foot-col p{color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.foot-col a,.foot-col button{color:#c9bcc1;transition:color .2s;text-align:left;font-size:14.5px}
+.foot-col a:hover,.foot-col button:hover{color:#fff}
+.foot-bot{margin-top:56px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px}
+.foot-bot button{color:#fff;font-weight:600}
 @media (max-width:1000px){
   .links,.host-link{display:none}
+  .xp-grid{grid-template-columns:repeat(2,1fr)}
+  .steps,.reviews{grid-template-columns:1fr}
+  .steps li::after{display:none}
+  .trust{grid-template-columns:repeat(2,1fr)}
+  .trust>div:nth-child(3){border-left:0}
+  .trust>div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}
+  .foot-top{grid-template-columns:1fr 1fr}
   .mob-only{display:flex!important}
   hr.mob-only{display:block!important}
   #langMenu{right:calc(var(--pad) + 60px)}
@@ -323,6 +401,10 @@ button.mi:hover,a.mi:hover{background:#f8eee8}
   .pop{padding:16px}
   .dow,.days{grid-template-columns:repeat(7,1fr)}
   .stays{margin-top:-8vh}
+  .xp-grid{grid-template-columns:1fr}
+  .sec{padding-bottom:84px}
+  .host{min-height:0}
+  .foot-top{grid-template-columns:1fr}
   .menu,#langMenu{right:16px;left:16px;width:auto}
   .dest{left:50%!important;width:min(300px,calc(100vw - 40px));margin-left:calc(min(300px,calc(100vw - 40px))/-2)}
   .contact{padding:22px}
@@ -353,6 +435,7 @@ button.mi:hover,a.mi:hover{background:#f8eee8}
   <symbol id="medal" viewBox="0 0 24 24"><circle cx="12" cy="14.5" r="5.5"/><path d="m8 9.5-3-6.5h5l2 4 2-4h5l-3 6.5M12 12v5"/></symbol>
   <symbol id="film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
   <symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" stroke="none" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3c.2.2 2.2 3.4 5.3 4.7 2 .8 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
   <symbol id="bell" viewBox="0 0 24 24"><path d="M3 18h18M4.5 18a7.5 7.5 0 0 1 15 0M12 8.5V6.5M10 6.5h4"/></symbol>
 </svg>
 
@@ -366,7 +449,7 @@ button.mi:hover,a.mi:hover{background:#f8eee8}
   </div>
   <ul class="links">
     <li><a href="#stays">Apartamentos</a></li>
-    <li><a href="#hero" data-slide="2">Dónde ir</a></li>
+    <li><a href="#donde-ir" data-scroll>Dónde ir</a></li>
     <li><a href="#footer-contact" id="contact-link">Contáctanos</a></li>
   </ul>
   <div class="nav-r">
@@ -457,8 +540,113 @@ button.mi:hover,a.mi:hover{background:#f8eee8}
     <div class="stays-h"><h2 class="gilda">Lugares recomendados para hospedarte</h2><button class="see" type="button" id="seeAll">Ver todo</button></div>
     <p class="filter-note" id="filterNote" hidden>Mostrando: <b id="fnText"></b><button type="button" id="fnClear">Quitar filtro</button></p>
     <div class="grid" id="grid"></div>
-    <div class="contact" id="footer-contact"><div><h3 class="gilda">¿Planeas tu viaje a Bangkok?</h3><p>Krung Travel · Bangkok, Tailandia · hola@krungtravel.example</p></div><a class="bookwa" id="contactWa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#wa"/></svg>Escríbenos por WhatsApp</a></div>
   </section>
+
+  <section class="sec" id="donde-ir">
+    <div class="sec-h rv"><p class="eyebrow">Dónde ir</p><h2 class="gilda">Experiencias para vivir Bangkok</h2><p>Recorridos con guías locales que hablan español o inglés. Grupos pequeños y recogida en tu alojamiento.</p></div>
+    <div class="xp-grid">
+      <article class="xp rv" style="--d:0s">
+        <div class="xp-img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_2697af01-b81b-4c9e-bb4f-7200cb1aa1e8.png&w=800&q=85');background-position:center"></div>
+        <span class="xp-tag">Noche</span>
+        <div class="xp-body">
+          <h3>Bangkok en tuk-tuk</h3>
+          <p>Chinatown iluminado, el mercado de flores Pak Khlong Talat y una parada para comer pad thai al paso.</p>
+          <div class="xp-foot"><span class="xp-meta"><svg class="i"><use href="#clock"/></svg>3 horas</span><span class="xp-price">desde <b data-usd="35"></b></span></div>
+          <a class="xp-btn" href="#" target="_blank" rel="noopener" data-wa="Hola Krung Travel, quiero reservar la experiencia «Bangkok en tuk-tuk». ¿Qué fechas tienen disponibles?"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#wa"/></svg>Reservar experiencia</a>
+        </div>
+      </article>
+      <article class="xp rv" style="--d:0.09s">
+        <div class="xp-img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_e2768ec3-714b-47bc-b03e-4fc6794d5dd9.png&w=800&q=85');background-position:center"></div>
+        <span class="xp-tag">Mañana</span>
+        <div class="xp-body">
+          <h3>Mercado flotante</h3>
+          <p>Navega entre barcas cargadas de fruta tropical, coco fresco y sopas de fideos preparadas sobre el agua.</p>
+          <div class="xp-foot"><span class="xp-meta"><svg class="i"><use href="#clock"/></svg>Medio día</span><span class="xp-price">desde <b data-usd="48"></b></span></div>
+          <a class="xp-btn" href="#" target="_blank" rel="noopener" data-wa="Hola Krung Travel, quiero reservar la experiencia «Mercado flotante». ¿Qué fechas tienen disponibles?"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#wa"/></svg>Reservar experiencia</a>
+        </div>
+      </article>
+      <article class="xp rv" style="--d:0.18s">
+        <div class="xp-img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_c5667173-fd6e-4dcb-9547-6c4518e19388.png&w=800&q=85');background-position:center"></div>
+        <span class="xp-tag">Atardecer</span>
+        <div class="xp-body">
+          <h3>Wat Arun y el río</h3>
+          <p>Paseo en barca de cola larga por los canales de Thonburi hasta ver el Templo del Amanecer encenderse al caer el sol.</p>
+          <div class="xp-foot"><span class="xp-meta"><svg class="i"><use href="#clock"/></svg>2 horas</span><span class="xp-price">desde <b data-usd="29"></b></span></div>
+          <a class="xp-btn" href="#" target="_blank" rel="noopener" data-wa="Hola Krung Travel, quiero reservar la experiencia «Wat Arun y el río». ¿Qué fechas tienen disponibles?"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#wa"/></svg>Reservar experiencia</a>
+        </div>
+      </article>
+      <article class="xp rv" style="--d:0.27s">
+        <div class="xp-img" style="background-image:url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_73725010-6ca6-46d8-a732-fc33275a02e0.png&w=900&q=85');background-position:center 35%"></div>
+        <span class="xp-tag">Cultura</span>
+        <div class="xp-body">
+          <h3>Templos de Bangkok</h3>
+          <p>El Gran Palacio, el Buda reclinado de Wat Pho y los mosaicos de porcelana de los templos más antiguos de la ciudad.</p>
+          <div class="xp-foot"><span class="xp-meta"><svg class="i"><use href="#clock"/></svg>5 horas</span><span class="xp-price">desde <b data-usd="42"></b></span></div>
+          <a class="xp-btn" href="#" target="_blank" rel="noopener" data-wa="Hola Krung Travel, quiero reservar la experiencia «Templos de Bangkok». ¿Qué fechas tienen disponibles?"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#wa"/></svg>Reservar experiencia</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="como-funciona">
+    <div class="sec-h rv"><p class="eyebrow">Cómo funciona</p><h2 class="gilda">Reserva en tres pasos</h2></div>
+    <ol class="steps">
+      <li class="rv" style="--d:0s"><span class="step-n">1</span><h3>Busca</h3><p>Elige la zona de Bangkok, tus fechas y cuántos viajan. Filtra y guarda tus favoritos con el corazón.</p></li>
+      <li class="rv" style="--d:.1s"><span class="step-n">2</span><h3>Reserva</h3><p>Abre el alojamiento, revisa fotos y comodidades y toca «Reservar ahora». Queda guardado en Mis reservas.</p></li>
+      <li class="rv" style="--d:.2s"><span class="step-n">3</span><h3>Confirma por WhatsApp</h3><p>Te escribimos con la disponibilidad y el total final. Sin pagos por adelantado en la web.</p></li>
+    </ol>
+    <dl class="trust rv">
+      <div><dt>Valoración media</dt><dd>4,8<small>/5</small></dd></div>
+      <div><dt>Reseñas verificadas</dt><dd>128</dd></div>
+      <div><dt>Alojamientos revisados</dt><dd>8</dd></div>
+      <div><dt>Atención por WhatsApp</dt><dd>24/7</dd></div>
+    </dl>
+  </section>
+
+  <section class="sec" id="opiniones">
+    <div class="sec-h rv"><p class="eyebrow">Opiniones</p><h2 class="gilda">Lo que cuentan los viajeros</h2></div>
+    <div class="reviews">
+      <figure class="review rv" style="--d:0s"><p class="rv-stars" aria-label="5 de 5"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></p><blockquote>«La casa de teca frente al río fue lo mejor del viaje. Desayunábamos viendo pasar las barcas y nos confirmaron todo por WhatsApp en minutos.»</blockquote><figcaption><img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005635_2bc44540-0fec-4b94-9f47-722c00c851dd.png&w=120&q=85" alt="" loading="lazy"><span><b>Valeria M.</b>Lima · Riverside Teak Villa</span></figcaption></figure>
+      <figure class="review rv" style="--d:.1s"><p class="rv-stars" aria-label="5 de 5"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></p><blockquote>«Reservamos el tour en tuk-tuk de noche y la comida en Chinatown fue increíble. El guía nos recogió puntual en el hotel.»</blockquote><figcaption><img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005635_fee8e948-a5dc-4e86-9ecc-dc8dbce6b660.png&w=120&q=85" alt="" loading="lazy"><span><b>Diego R.</b>Bogotá · Bangkok en tuk-tuk</span></figcaption></figure>
+      <figure class="review rv" style="--d:.2s"><p class="rv-stars" aria-label="5 de 5"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></p><blockquote>«El condo en Sathorn tenía una vista espectacular y estaba a pasos del metro. Volvería a reservar con Krung sin dudarlo.»</blockquote><figcaption><img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005635_ce259660-2765-42ee-a5b0-3afee70b11aa.png&w=120&q=85" alt="" loading="lazy"><span><b>Camila S.</b>Santiago · Sathorn Sky Condo</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="host rv" style="background-image:linear-gradient(90deg,rgba(38,24,30,.86) 0%,rgba(38,24,30,.55) 45%,rgba(38,24,30,.05) 80%),url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261115_005347_2a7781a6-ffd1-48f1-bb19-051b67063047.png&w=2400&q=85')">
+      <p class="eyebrow eyebrow-l">Para anfitriones</p>
+      <h2 class="gilda">¿Tienes un espacio especial en Bangkok?</h2>
+      <p>Publica tu casa, departamento o villa con nosotros. Nos encargamos de las fotos, la atención a los huéspedes y las reservas.</p>
+      <div class="host-cta"><a class="btn-o" href="#" target="_blank" rel="noopener" data-wa="Hola Krung Travel, quiero publicar mi alojamiento en Bangkok como anfitrión.">Publicar mi alojamiento</a><a class="btn-g" href="#como-funciona" data-scroll>Cómo funciona</a></div>
+    </div>
+  </section>
+
+  <section class="sec faq-sec" id="preguntas">
+    <div class="sec-h rv"><p class="eyebrow">Preguntas frecuentes</p><h2 class="gilda">Antes de viajar</h2><p>¿No encuentras tu respuesta? Escríbenos por WhatsApp y te respondemos al momento.</p></div>
+    <div class="faq rv">
+      <details open><summary>¿Cómo confirmo mi reserva?</summary><p>Toca «Reservar ahora» en el alojamiento y luego «Confirmar por WhatsApp». Te respondemos con la disponibilidad, el total final y las opciones de pago.</p></details>
+      <details><summary>¿Tengo que pagar en la web?</summary><p>No. La web solo guarda tu solicitud. El pago se coordina directamente con nuestro equipo una vez confirmada la disponibilidad.</p></details>
+      <details><summary>¿Puedo cancelar o cambiar las fechas?</summary><p>Sí. Puedes cancelar tu solicitud desde «Mis reservas». Si ya está confirmada, escríbenos y te contamos las condiciones del alojamiento.</p></details>
+      <details><summary>¿Ofrecen traslado desde el aeropuerto?</summary><p>Sí, coordinamos traslados desde los aeropuertos de Suvarnabhumi y Don Mueang hasta tu alojamiento. Pídelo al confirmar tu reserva.</p></details>
+      <details><summary>¿Necesito visa para viajar a Tailandia?</summary><p>Depende de tu nacionalidad y del tiempo de estadía. Revisa los requisitos vigentes en el consulado de Tailandia de tu país antes de comprar tus vuelos.</p></details>
+      <details><summary>¿En qué moneda veo los precios?</summary><p>Puedes ver los precios en dólares, soles o baht con el botón del globo, arriba a la derecha. Los cambios son aproximados y el total final se confirma en dólares.</p></details>
+    </div>
+  </section>
+
+  <footer class="foot" id="footer-contact">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="#" data-top>Krung Travel</a>
+        <p>Alojamientos y experiencias elegidos a mano en Bangkok, con atención en español de principio a fin.</p>
+        <a class="bookwa foot-wa" id="contactWa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#wa"/></svg>Escríbenos por WhatsApp</a>
+      </div>
+      <nav class="foot-col" aria-label="Explora"><p>Explora</p><a href="#stays" data-scroll>Alojamientos</a><a href="#donde-ir" data-scroll>Dónde ir</a><a href="#como-funciona" data-scroll>Cómo funciona</a><a href="#opiniones" data-scroll>Opiniones</a></nav>
+      <nav class="foot-col" aria-label="Ayuda"><p>Ayuda</p><a href="#preguntas" data-scroll>Preguntas frecuentes</a><button type="button" id="ftBookings">Mis reservas</button><button type="button" id="ftFavs">Mis favoritos</button><a href="#" target="_blank" rel="noopener" data-wa="Hola Krung Travel, quiero publicar mi alojamiento en Bangkok como anfitrión.">Hazte anfitrión</a></nav>
+      <div class="foot-col"><p>Contacto</p><span>Bangkok, Tailandia</span><span>hola@krungtravel.example</span><span>Atención 24/7 por WhatsApp</span></div>
+    </div>
+    <div class="foot-bot"><span>© 2026 Krung Travel. Proyecto de demostración.</span><button type="button" id="toTop">Volver arriba ↑</button></div>
+  </footer>
+
 </main>
 
 <section class="detail" id="detail" aria-label="Detalle del alojamiento" aria-hidden="true">
@@ -922,7 +1110,7 @@ $$('#acctMenu [data-act]').forEach(b => b.addEventListener('click', () => {
   if (a === 'bookings') { openSheet(); return; }
   closeDetail();
   if (a === 'stays') $('stays').scrollIntoView({ behavior: 'smooth' });
-  else if (a === 'go') { scrollTo({ top: 0, behavior: 'smooth' }); go(2); schedule(); }
+  else if (a === 'go') $('donde-ir').scrollIntoView({ behavior: 'smooth' });
   else if (a === 'contact') $('footer-contact').scrollIntoView({ behavior: 'smooth', block: 'center' });
   else if (a === 'favs') {
     if (!favs.size) { toast('Aún no tienes favoritos. Toca el corazón de un alojamiento para guardarlo.'); return; }
@@ -960,6 +1148,21 @@ sheet.addEventListener('click', e => { if (e.target === sheet) closeSheet(); });
 addEventListener('keydown', e => { if (e.key === 'Escape' && sheet.classList.contains('open')) closeSheet(); });
 updateCounts();
 addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+/* ---------- Secciones: enlaces internos, WhatsApp, precios y animación ---------- */
+$$('[data-scroll]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); closeDetail(); closeMenus(); $(a.getAttribute('href').slice(1)).scrollIntoView({ behavior: 'smooth' }); }));
+$$('[data-wa]').forEach(a => { a.href = waLink(a.dataset.wa); });
+$$('[data-top]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); scrollTo({ top: 0, behavior: 'smooth' }); }));
+$('toTop').addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+$('ftBookings').addEventListener('click', openSheet);
+$('ftFavs').addEventListener('click', () => {
+  if (!favs.size) { toast('Aún no tienes favoritos. Toca el corazón de un alojamiento para guardarlo.'); return; }
+  setFilter({ type: 'fav' }); $('stays').scrollIntoView({ behavior: 'smooth' });
+});
+function renderXpPrices() { $$('[data-usd]').forEach(b => b.textContent = money(+b.dataset.usd)); }
+renderXpPrices();
+$('curList').addEventListener('click', () => setTimeout(renderXpPrices));
+$$('.rv').forEach(el => seenIO.observe(el));
 })();
 </script>
 </body>
