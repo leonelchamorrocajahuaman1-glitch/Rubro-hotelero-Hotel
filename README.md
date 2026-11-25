@@ -13,7 +13,19 @@ js/hero.js          Portada día/noche: niebla WebGL2, hundimiento y parallax
 js/main.js          Menú, animaciones al desplazarse, reservas, galería, contacto
 assets/img/         Fotografías (Unsplash), optimizadas en WebP
 lumen-roof/         Proyecto original Lumen Roof, intacto
+inti-travel/        Inti Travel: hoteles y experiencias en Perú (index.html + img/)
+krung-travel/       Krung Travel: la misma web, versión Bangkok
 ```
+
+## Inti Travel (`inti-travel/`)
+
+Sitio de reservas de hoteles en Perú: portada con transición de niebla y nubes, buscador por destino
+(Cusco, Lima, Arequipa, Ica, Madre de Dios), calendario y huéspedes, 8 hoteles con página de detalle,
+experiencias, opiniones, preguntas frecuentes y reservas por WhatsApp. Precios en soles, dólares o euros.
+
+- Ábrelo con Live Server en `http://127.0.0.1:5500/inti-travel/`.
+- ⚠ El número de WhatsApp (`const WHATSAPP`), el correo y las opiniones son ejemplos: reemplázalos antes de publicar.
+- Favoritos, reservas y calificaciones se guardan en el navegador del visitante; la reserva real se confirma por WhatsApp.
 
 ## Ejecutar con Live Server (VS Code)
 
